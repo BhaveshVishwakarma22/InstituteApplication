@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg"
+    tools:context=".Select_Mode">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:src="@mipmap/edu_con_png" />
+
+        <EditText
+            android:id="@+id/etMail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="5dp"
+            android:fontFamily="@font/montaga"
+            android:layout_weight="1"
+            android:background="@drawable/outline_rec"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textPersonName"
+            android:padding="10dp" />
+
+
+        <EditText
+            android:id="@+id/etC_Code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montaga"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/outline_rec"
+            android:ems="10"
+            android:hint="College Code"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/etfid_or_rno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="5dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/montaga"
+            android:background="@drawable/outline_rec"
+            android:ems="10"
+            android:hint="Faculty ID or Roll No."
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/montaga"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/outline_rec"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="15dp"
+            android:background="@drawable/outline_rec"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/montaga"
+                android:padding="4dp"
+                android:textSize="18dp"
+                android:layout_marginTop="5dp"
+                android:text="Select Mode"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/mode_spinner"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/montaga"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/outline_rec"
+                android:padding="15dp" />
+        </LinearLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/montaga"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Login" />
+
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/btn_signup"-->
+<!--            style="@style/Widget.MaterialComponents.Button.OutlinedButton"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Register"-->
+<!--            app:strokeColor="@color/blue_Primary" />-->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_institute_mode"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/montaga"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:text="Institute Mode"
+            app:strokeColor="@color/blue_Primary" />
+    </LinearLayout>
+
+</RelativeLayout>

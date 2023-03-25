@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@mipmap/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp"
+    tools:context=".Institute_home">
+<!--Base Tab-->
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:fontFamily="@font/montserrat_alternates"
+            android:textStyle="bold"
+            android:text="Institute mode"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        <ImageButton
+            android:id="@+id/btn_edit_institute"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:adjustViewBounds="true"
+            android:background="@drawable/outline_rec"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/edit_icon" />
+
+    </RelativeLayout>
+
+
+<!--    Home Tab    -->
+    <LinearLayout
+        android:id="@+id/home_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout1"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/home_i_name"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alegreya_sans_extrabold"
+                android:text="Institute Name"
+                android:textAllCaps="true"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/home_i_code"
+                style="@style/TextAppearance.MaterialComponents.Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montaga"
+                android:text="Institute Code: C-123" />
+
+            <TextView
+                android:id="@+id/home_i_email_add"
+                style="@style/TextAppearance.MaterialComponents.Body2"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/montaga"
+                android:layout_height="wrap_content"
+                android:text="Institute Email: institute@gmail.com\nInstitute Address: Amlidih Raipur Chhattisgarh" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/blue_Primary" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--    Principal Fragment -->
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/principal_fragment"
+                android:name="com.lenovo.instituteapplication.Principal_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <!--    Notice Fragment -->
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/m_notice_fragment"
+                android:name="com.lenovo.instituteapplication.NoticeFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/outline_rec" />
+        </LinearLayout>
+    </LinearLayout>
+
+<!--    Notes Tab   -->
+
+
+        <!--    Chat Tab    -->
+    <LinearLayout
+        android:id="@+id/chat_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout1">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_teacher_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montaga"
+            android:textStyle="bold"
+            android:drawableTop="@drawable/chat_ico"
+            android:text="Teacher Chat"
+            app:cornerRadius="5dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_parent_instiute_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montaga"
+            android:textStyle="bold"
+            android:drawableTop="@drawable/chat_ico"
+            android:text="Parent Institute Chat"
+            app:cornerRadius="5dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_student_teacher_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montaga"
+            android:textStyle="bold"
+            android:drawableTop="@drawable/chat_ico"
+            android:text="Teacher Student Chat"
+            app:cornerRadius="5dp" />
+    </LinearLayout>
+
+        <!--        Record Tab-->
+    <LinearLayout
+        android:id="@+id/record_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout1">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_student_List"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montaga"
+            android:textStyle="bold"
+            android:text="Student List"
+            app:cornerRadius="5dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_parent_List"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montaga"
+            android:textStyle="bold"
+            android:text="Parent List"
+            app:cornerRadius="5dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_teacher_List"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montaga"
+            android:textStyle="bold"
+            android:text="Teacher List"
+            app:cornerRadius="5dp" />
+    </LinearLayout>
+<!--    Suggestion Tab -->
+    <LinearLayout
+        android:id="@+id/suggestion_tab_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout1"
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_suggestion3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montaga"
+            android:textStyle="bold"
+            android:text="Suggestion"
+            app:cornerRadius="5dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_complaint3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montaga"
+            android:textStyle="bold"
+            android:text="Complaint"
+            app:cornerRadius="5dp" />
+
+    </LinearLayout>
+
+    <!--    Account Tab -->
+    <LinearLayout
+        android:id="@+id/account_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout1"
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_student_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montaga"
+            android:textStyle="bold"
+            android:text="Student Account"
+            app:cornerRadius="5dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_teacher_account1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montaga"
+            android:textStyle="bold"
+            android:text="Teacher Account"
+            app:cornerRadius="5dp" />
+
+    </LinearLayout>
+
+<!--    Bottom Nav Bar-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/bottom_navigation_menu" />
+</androidx.constraintlayout.widget.ConstraintLayout>

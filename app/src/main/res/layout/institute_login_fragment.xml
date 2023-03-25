@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    android:background="@mipmap/bg"
+    android:gravity="center_horizontal"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montaga"
+        android:padding="15dp"
+        android:text="Login Institute"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/blue_Primary" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="20dp"
+        >
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="7dp"
+        android:id="@+id/et_login_institute_code"
+        android:hint="Enter Institute Code"
+        android:fontFamily="@font/montaga"
+        android:background="@drawable/outline_rec"
+        android:minLines="1"
+        android:maxLines="1"
+        android:ems="10"
+        android:layout_marginBottom="25dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="7dp"
+        android:id="@+id/et_login_institute_name"
+        android:hint="Enter Institute Name"
+        android:fontFamily="@font/montaga"
+        android:background="@drawable/outline_rec"
+        android:minLines="1"
+        android:maxLines="1"
+        android:ems="10"
+        android:layout_marginBottom="25dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="7dp"
+        android:fontFamily="@font/montaga"
+        android:id="@+id/et_login_institute_email"
+        android:hint="Enter  Institute Email"
+        android:background="@drawable/outline_rec"
+        android:inputType="textEmailAddress"
+        android:minLines="1"
+        android:maxLines="1"
+        android:ems="10"
+        android:layout_marginBottom="25dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="7dp"
+        android:hint="Enter Password"
+        android:id="@+id/et_login_institute_pass"
+        android:background="@drawable/outline_rec"
+        android:inputType="textPassword"
+        android:fontFamily="@font/montaga"
+        android:minLines="1"
+        android:maxLines="1"
+        android:ems="10"
+        android:layout_marginBottom="25dp"
+        />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_login_institute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/montaga"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:text="Login" />
+
+    </LinearLayout>
+
+</LinearLayout>

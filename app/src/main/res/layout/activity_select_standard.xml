@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@mipmap/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".Select_Standard">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:fontFamily="@font/montserrat_alternates"
+        android:textStyle="bold"
+        android:text="Select Standard"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4th Semester"
+        android:id="@+id/sem4_button"
+        android:fontFamily="@font/montaga"
+        android:textStyle="bold"
+        android:layout_margin="5dp"
+        />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5th Semester"
+        android:fontFamily="@font/montaga"
+        android:textStyle="bold"
+        android:id="@+id/sem5_button"
+        android:layout_margin="5dp"
+        />
+
+</LinearLayout>

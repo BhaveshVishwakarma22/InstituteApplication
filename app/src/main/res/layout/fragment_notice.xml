@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".NoticeFragment"
+    android:background="@drawable/outline_rec">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_notice"
+        android:fontFamily="@font/montaga"
+        tools:itemCount="4"
+        android:padding="7dp"
+        android:text="Notice"
+        style="@style/TextAppearance.AppCompat.Body2"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/blue_Primary"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        tools:itemCount="2"
+        android:id="@+id/notice_rv"
+        />
+
+</LinearLayout>

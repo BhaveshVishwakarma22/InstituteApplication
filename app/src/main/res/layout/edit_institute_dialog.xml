@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/light_blue_Primary"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_black"
+        android:padding="7dp"
+        android:text="Edit Institute"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/blue_Primary" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="10dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                android:id="@+id/et_edit_institute_name"
+                android:hint="Enter Institute Name"
+                android:background="@drawable/outline_rec"
+                android:minLines="1"
+                android:maxLines="1"
+                android:ems="10"
+                android:layout_marginBottom="10dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                android:id="@+id/et_edit_institute_email"
+                android:hint="Enter  Institute Email"
+                android:background="@drawable/outline_rec"
+                android:inputType="textEmailAddress"
+                android:minLines="1"
+                android:maxLines="1"
+                android:ems="10"
+                android:layout_marginBottom="10dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                android:hint="Enter Principal's Name"
+                android:id="@+id/et_edit_institute_pName"
+                android:background="@drawable/outline_rec"
+                android:minLines="1"
+                android:maxLines="1"
+                android:ems="10"
+                android:layout_marginBottom="10dp"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                android:hint="Enter Principal's Contact"
+                android:id="@+id/et_edit_institute_pContact"
+                android:background="@drawable/outline_rec"
+                android:minLines="1"
+                android:maxLines="1"
+                android:ems="10"
+                android:layout_marginBottom="10dp"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                android:hint="Enter Principal's Email"
+                android:id="@+id/et_edit_institute_pEmail"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/outline_rec"
+                android:minLines="1"
+                android:maxLines="1"
+                android:ems="10"
+                android:layout_marginBottom="10dp"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                android:hint="Enter  Institute Address"
+                android:id="@+id/et_edit_institute_address"
+                android:background="@drawable/outline_rec"
+                android:minLines="1"
+                android:maxLines="1"
+                android:ems="10"
+                android:layout_marginBottom="10dp"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                android:id="@+id/et_edit_institute_city"
+                android:hint="Enter  Institute City"
+                android:background="@drawable/outline_rec"
+                android:minLines="1"
+                android:maxLines="1"
+                android:ems="10"
+                android:layout_marginBottom="10dp"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                android:hint="Enter  Institute State"
+                android:id="@+id/et_edit_institute_state"
+                android:background="@drawable/outline_rec"
+                android:minLines="1"
+                android:maxLines="1"
+                android:ems="10"
+                android:layout_marginBottom="10dp"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                android:id="@+id/et_edit_institute_oldpass"
+                android:hint="Enter Old Password"
+                android:background="@drawable/outline_rec"
+                android:inputType="textPassword"
+                android:minLines="1"
+                android:maxLines="1"
+                android:ems="10"
+                android:layout_marginBottom="10dp"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                android:id="@+id/et_edit_institute_newpass"
+                android:hint="Enter New Password"
+                android:background="@drawable/outline_rec"
+                android:inputType="textPassword"
+                android:minLines="1"
+                android:maxLines="1"
+                android:ems="10"
+                android:layout_marginBottom="10dp"
+                />
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_edit_institute"
+                android:text="Done"
+                android:padding="10dp"
+                android:layout_gravity="center_horizontal"
+                app:cornerRadius="10dp"
+                />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

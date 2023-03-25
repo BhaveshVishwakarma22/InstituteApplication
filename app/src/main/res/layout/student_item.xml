@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/outline_rec"
+    android:orientation="vertical"
+    android:layout_marginBottom="15dp"
+    android:padding="7dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/student_name"
+        android:textSize="18dp"
+        android:text="Student Name: Bhavesh Vishwakarma"
+        android:padding="5dp"
+        style="@style/TextAppearance.AppCompat.Headline"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/blue_Primary" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/student_description"
+        android:text="R.No.: 12\nB.Tech 4th Sem\nContact No.: 1234567890\nPerformance: Good\nAttendance: 52 out of 100\nTotal Fee: 1000\nFess due: 50\nTution Fee:500\nBus Fee:50\nCanteen Due:200\nHostel Fee: 0\nAddress: Amlidih\nParents Name: Harish Chandra Vishwakarma\nParents Contact: 1234567890"
+        android:padding="5dp"
+        android:layout_marginBottom="5dp"
+        style="@style/TextAppearance.AppCompat.Body2"
+        />
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg"
+    tools:context=".Teacher_Student_Chat"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:weightSum="100"
+    >
+    <TextView
+        android:id="@+id/home_tsc_title"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_weight="4"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:textAllCaps="true"
+        android:fontFamily="@font/alegreya_sans_extrabold"
+        android:text="TEACHER STUDENT  Chat"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/blue_Primary" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ts_chat_Rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="80"
+        android:padding="5dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:weightSum="100"
+        android:id="@+id/mainpulater2"
+        android:background="@drawable/outline_rec"
+        android:padding="5dp"
+        android:orientation="horizontal">
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="70"
+            android:layout_marginEnd="15dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/outline_rec"
+            android:padding="15dp"
+            android:id="@+id/et_ts_msg"
+            android:hint="Enter your Message"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_weight="30"
+            android:layout_height="match_parent"
+            android:id="@+id/btn_ts_send"
+            android:text="Send"/>
+    </LinearLayout>
+</LinearLayout>

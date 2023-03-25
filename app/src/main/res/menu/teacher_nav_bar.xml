@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tea_home"
+        android:title="Home"
+        android:icon="@drawable/home_ico"/>
+    <item
+        android:id="@+id/tea_tt"
+        android:title="Time Table"
+        android:icon="@drawable/time_table_ico"/>
+    <item
+        android:id="@+id/tea_chat"
+        android:title="Chat"
+        android:icon="@drawable/chat_ico"/>
+    <item
+        android:id="@+id/tea_notes"
+        android:title="Notes"
+        android:icon="@drawable/notes_ico"/>
+    <item
+        android:id="@+id/tea_money"
+        android:title="Money"
+        android:icon="@drawable/ic_baseline_attach_money_24"/>
+
+</menu>

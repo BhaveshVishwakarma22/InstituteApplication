@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@mipmap/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".Parent_Mode_Main">
+
+    <RelativeLayout
+        android:id="@+id/stuRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/montserrat_alternates"
+            android:textStyle="bold"
+            android:text="Parent Mode"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        <ImageButton
+            android:id="@+id/btn_par_edit_profile"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:adjustViewBounds="true"
+            android:background="@drawable/outline_rec"
+            android:padding="5dp"
+            android:visibility="gone"
+            android:scaleType="fitCenter"
+            android:src="@drawable/edit_icon" />
+    </RelativeLayout>
+
+
+    <!--    Home Tab    -->
+    <LinearLayout
+        android:id="@+id/stu_home_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        app:layout_constraintBottom_toTopOf="@+id/stu_bottom_navigation_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stuRelativeLayout"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:weightSum="100">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="28"
+                android:src="@mipmap/girl_img"
+                />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="70"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextAppearance.MaterialComponents.Body1"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/montaga"
+                    android:layout_height="wrap_content"
+                    android:text="Mrs. Arpita Sinha\nParent of Rishabh Singh\nChild's Course: B.Tech(ET.)\nChild's Semester: 3rd Semester" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--    Notice Fragment -->
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/stu_notice_fragment"
+                android:name="com.lenovo.instituteapplication.NoticeFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/outline_rec" />
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/stu_main_chat_btn"
+                android:text="Parent Teacher CHAT"
+                android:fontFamily="@font/montaga"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/chat_ico"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--    Performance Tab-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/stu_perfomance_tab"
+        android:visibility="gone"
+        android:background="@drawable/outline_rec"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/stu_bottom_navigation_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stuRelativeLayout"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Performance: Good"
+            android:padding="10dp"
+            android:textSize="18sp"
+            style="@style/TextAppearance.AppCompat.Body2"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/blue_Primary" />
+        <TextView
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:text="Teacher Remarks"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/blue_Primary" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="Prasad Sir (Maths): Focus on algebra and geometry\n\nDRK Sir (Physics): Practice numericals on solid body"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/blue_Primary" />
+            <TextView
+                style="@style/TextAppearance.MaterialComponents.Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:text="Improvement Area"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="60dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/blue_Primary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                style="@style/TextAppearance.AppCompat.Body1"
+
+                android:paddingBottom="5dp"
+                android:text="English\nCommunication" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--    Chat Tab -->
+    <LinearLayout
+        android:id="@+id/stu_notes_tab"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:visibility="gone"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/stu_bottom_navigation_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/notes_webView"/>
+    </LinearLayout>
+
+    <!--    Fees Tab -->
+    <LinearLayout
+        android:id="@+id/stu_fees_tab"
+        android:layout_width="match_parent"
+        android:padding="15dp"
+        android:background="@drawable/outline_rec"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/stu_bottom_navigation_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/stu_fees_desc"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:text="Fee Paid:      1000\nTotal Fee:     1600\nFee Due:         600\nCanteen:         100\nMess:              100\nHostel:            100"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/stu_suggestion_tab_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/stu_bottom_navigation_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/stu_btn_suggestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Suggestion"
+            app:cornerRadius="5dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/stu_btn_complaint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Complaint"
+            app:cornerRadius="5dp" />
+
+    </LinearLayout>
+
+    <!--    Bottom Nav Bar-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/stu_bottom_navigation_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/parent_nav_bar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

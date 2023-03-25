@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@mipmap/bg"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".Teacher_Mode_Main">
+
+    <RelativeLayout
+        android:id="@+id/teachRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:fontFamily="@font/rubik_mono_one"
+            android:text="Teacher Mode"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+    </RelativeLayout>
+
+
+    <!--    Home Tab    -->
+    <LinearLayout
+        android:id="@+id/tea_home_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teachRelativeLayout"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:weightSum="100">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="26"
+                android:src="@mipmap/teach_img"
+                android:padding="2dp"
+                />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="70"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextAppearance.MaterialComponents.Body1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Om shankar Prasad\nMathematics Teacher\nClass incharge: 2nd Year (I.T.)" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+            <!--    Notice Fragment -->
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/stu_notice_fragment"
+                android:name="com.lenovo.instituteapplication.NoticeFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/outline_rec" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--    Teacher Time table Tab-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tea_tt_tab"
+        android:visibility="gone"
+        android:background="@drawable/outline_rec"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teachRelativeLayout"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <TextView
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:text="Teacher's Time Table"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/blue_Primary" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:layout_weight="9"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="Maths:            7:00 AM - 8:00AM       - P2\nMaths:            8:00 AM - 9:00AM       - P3\nMaths:            9:00 AM - 10:00AM     - P1\nMaths:            10:00 AM - 11:00AM   - Q1\nMaths:            11:00 AM - 12:00AM   - Q2\nLunch:             12:00PM - 13:00PM    - Q3\nGeometry:      13:00 AM - 3:00AM     - P2"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+<!--    Chat Tab    -->
+    <LinearLayout
+        android:id="@+id/t_mode_chat_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/tea_bottom_navigation_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teachRelativeLayout">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_teacher_chat7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/chat_ico"
+            android:text="Teacher Chat"
+            app:cornerRadius="5dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_student_teacher_chat7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/chat_ico"
+            android:text="Teacher Student Chat"
+            app:cornerRadius="5dp" />
+    </LinearLayout>
+
+    <!--    Money Tab -->
+    <LinearLayout
+        android:id="@+id/t_mode_money_tab"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:background="@drawable/outline_rec"
+        android:orientation="vertical"
+        android:padding="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/tea_bottom_navigation_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teachRelativeLayout">
+
+        <TextView
+            android:id="@+id/stu_fees_desc"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="20dp"
+            android:text="Payment:          1000\nPayment Due:  500\nMess Fee:         100\nCanteen Due:   100" />
+
+    </LinearLayout>
+
+<!--    Notes Tab-->
+    <LinearLayout
+        android:id="@+id/t_mode_notes_tab"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:visibility="gone"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/tea_bottom_navigation_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teachRelativeLayout">
+
+        <WebView
+            android:id="@+id/notes_webView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <!--    Bottom Nav Bar-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/tea_bottom_navigation_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/teacher_nav_bar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

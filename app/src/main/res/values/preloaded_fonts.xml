@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/advent_pro</item>
+        <item>@font/alegreya_sans_extrabold</item>
+        <item>@font/alike</item>
+        <item>@font/autour_one</item>
+        <item>@font/montaga</item>
+        <item>@font/montserrat_alternates</item>
+        <item>@font/roboto_black</item>
+        <item>@font/rubik_mono_one</item>
+    </array>
+</resources>
