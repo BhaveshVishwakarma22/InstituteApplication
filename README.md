@@ -1,4 +1,4 @@
-# InstituteApplication
+# Institute Application
   This is an institute management application created by my team Blaters (Bhavesh Vishwakarma, Mirza Humdaan, Ashish Chaubey and Aman Singh)
   that lead us to the grand finale of national level hackathon "HackaversuuMM'22" organized by "MM(DU), Haryana".
   We have created this application to bridge the gap between the student, teachers and parents.
@@ -9,7 +9,7 @@ This application is built in reagrd to connect the techers, parents, pricipal an
 
 You can find the screen shot of the application in "InstituteApplication/app/src/main/res/drawable"
 
-# Features.
+# Features
 1. Class notes drive: Teachers can share notes on drive and it will be displayed on the student ID.
 2. Teachers can share student's performance to their parents.
 3. Students and parents can complaint about teachers.
@@ -19,7 +19,27 @@ You can find the screen shot of the application in "InstituteApplication/app/src
 7. Notice board.
 8. Time table.
 
+# Contributors
+
+<table>
+  <tr>
+    <td>1.</td> <td>Bhavesh Vishwakarma</td><td>(Android Application Development and system design)</td>
+  </tr>
+  
+  <tr>
+    <td>1.</td> <td>Mirza Humdaan Baig</td><td>(API Development)</td>
+  </tr>
+  
+  <tr>
+    <td>1.</td> <td>Ashish Chaubey</td><td>(API Development and UI design)</td>
+  </tr>
+  
+  <tr>
+    <td>1.</td> <td>Aman Singh</td><td>(Database Development)</td>
+  </tr>
+</table>
 
 
 --------------------------------------------------------------------------------------------------------------------------
 You can reach me on my email: bv200222@gmail.com
+
